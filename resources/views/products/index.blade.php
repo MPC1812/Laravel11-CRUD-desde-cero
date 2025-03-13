@@ -45,14 +45,14 @@
                                         <td class="px-6 py-4">
                                             {{ $product->quantity }}
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4 flex justify-end">
                                             <a href="{{ route('products.edit', $product->id) }}"
                                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Editar</a>
 
                                             <form action="{{ route('products.destroy', $product) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit">Eliminar</button>
+                                                <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="submit">Eliminar</button>
                                             </form>
                                         </td>
                                     </tr>
